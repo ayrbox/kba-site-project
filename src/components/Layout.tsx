@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
+import { ReactElement, FC } from 'react';
 
 import '@styles/ResetCss';
 import '@styles/GlobalCss';
@@ -48,8 +49,12 @@ const LayoutWrapper = styled.div`
   }
 `;
 
-const Layout = ({ children }) => {
-  return <LayoutWrapper>{children}</LayoutWrapper>;
-};
+interface LayoutProps {
+  children: ReactElement | ReactElement[];
+}
+
+const Layout: FC<LayoutProps> = ({ children }: LayoutProps): ReactElement => (
+  <LayoutWrapper>{children}</LayoutWrapper>
+);
 
 export default Layout;

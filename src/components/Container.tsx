@@ -1,18 +1,22 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/css';
+import { FC, ReactElement } from 'react';
 
-interface ContainerWrapperProps {
+interface ContainerProps {
+  children: ReactElement;
+  className: string;
   fullWidth: boolean;
-  noGutter: boolean;
-  width: string;
   mobileGutter: boolean;
+  width: string;
+  noGutter: boolean;
+  id: string;
 }
 
 const ContainerWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  ${(props: ContainerWrapperProps) =>
+  ${(props: ContainerProps) =>
     props.fullWidth &&
     css`
       width: 100%;
@@ -50,17 +54,7 @@ const ContainerWrapper = styled.div`
   }
 `;
 
-interface ContainerProps {
-  children: React.ReactElement;
-  className: string;
-  fullWidth: boolean;
-  mobileGutter: boolean;
-  width: string;
-  noGutter: boolean;
-  id: string;
-}
-
-const Container = ({
+const Container: FC<ContainerProps> = ({
   children,
   className,
   fullWidth,
@@ -68,7 +62,7 @@ const Container = ({
   noGutter,
   width,
   id,
-}: ContainerProps) => {
+}: ContainerProps): ReactElement => {
   const addAllClasses = ['container'];
 
   if (className) {
