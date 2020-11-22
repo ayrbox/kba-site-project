@@ -4,13 +4,13 @@ import { css } from '@emotion/css';
 import { FC, ReactElement } from 'react';
 
 interface ContainerProps {
-  children: ReactElement;
-  className: string;
-  fullWidth: boolean;
-  mobileGutter: boolean;
-  width: string;
-  noGutter: boolean;
-  id: string;
+  children: ReactElement | ReactElement[];
+  className?: string;
+  fullWidth?: boolean;
+  mobileGutter?: boolean;
+  width?: string;
+  noGutter?: boolean;
+  id?: string;
 }
 
 const ContainerWrapper = styled.div`

@@ -1,7 +1,15 @@
 import * as React from 'react';
+// @ts-ignore
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-const items = [
+export type MenuItem = {
+  slug: string;
+  label: string;
+  path: string;
+  offset: number;
+};
+
+const items: MenuItem[] = [
   {
     slug: 'study-materials',
     label: 'Study Materials',
@@ -23,20 +31,16 @@ const items = [
   { slug: 'register', label: 'Register', path: '#', offset: 0 },
 ];
 
-const NavBar = () => {
-  return (
-    <div>
-      <ul className="main-menu">
-        {items.map(({ slug, label, path, offset }, idx) => (
-          <li key={`menu-item-${slug}`}>
-            <AnchorLink href={path} offset={offset}>
-              {label}
-            </AnchorLink>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+const NavBar = () => (
+  <ul className="main-menu">
+    {items.map(({ slug, label, path, offset }) => (
+      <li key={`menu-item-${slug}`}>
+        <AnchorLink href={path} offset={offset}>
+          {label}
+        </AnchorLink>
+      </li>
+    ))}
+  </ul>
+);
 
 export default NavBar;

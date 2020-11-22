@@ -6,7 +6,7 @@ import NavbarWrapper from './NavbarWrapper';
 const NavbarIndex = () => (
   <NavbarWrapper>
     <Container>
-      <h1>Logo goes here</h1>
+      <h1>KBA Cardiology</h1>
       <Navbar />
     </Container>
   </NavbarWrapper>
