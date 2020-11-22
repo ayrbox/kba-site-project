@@ -8,9 +8,8 @@ import '@styles/GlobalCss';
 const LayoutWrapper = styled.div`
   overflow: hidden;
   .nav-wrapper {
-    border: 2px solid red;
-    background: navy;
-    color: yellow;
+    background: #486295;
+    color: #fff;
 
     .main-menu {
       margin-right: 40px;
