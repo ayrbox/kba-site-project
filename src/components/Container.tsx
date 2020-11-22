@@ -2,10 +2,17 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/css';
 
+interface ContainerWrapperProps {
+  fullWidth: boolean;
+  noGutter: boolean;
+  width: string;
+  mobileGutter: boolean;
+}
+
 const ContainerWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  ${(props) =>
+  ${(props: ContainerWrapperProps) =>
     props.fullWidth &&
     css`
       width: 100%;
