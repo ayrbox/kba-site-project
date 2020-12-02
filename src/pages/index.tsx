@@ -6,6 +6,7 @@ import Layout from '@components/Layout';
 import { siteTheme } from '../theme';
 import BannerSection from '@components/BannerSection/BannerSection';
 import InfoSection from '@components/InfoSection.tsx';
+import AboutSection from '@components/AboutSection.tsx';
 
 const IndexPage = () => {
   return (
@@ -14,6 +15,7 @@ const IndexPage = () => {
         <NavBar />
         <BannerSection />
         <InfoSection />
+        <AboutSection />
       </Layout>
     </ThemeProvider>
   );
