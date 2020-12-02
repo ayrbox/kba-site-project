@@ -10,4 +10,5 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tsconfig-paths`,
   ],
+  pathPrefix: `/kba-site-project`,
 };
