@@ -7,7 +7,16 @@ module.exports = {
     // `gatsby-plugin-react-helmet`,
 
     // Add typescript stack into webpack
+    'gatsby-plugin-sharp',
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tsconfig-paths`,
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images`,
+      },
+    },
   ],
 };
