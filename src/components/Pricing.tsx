@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import Container from '@components/Container';
 import styled from '@emotion/styled';
 import Option from '@components/Option';
@@ -13,6 +14,10 @@ export const PricingWrapper = styled.section`
 `;
 
 const Pricing = () => {
+  const [selectedOption, setSelectedOption] = useState('1');
+
+  const handleOptionClick = (id: string) => setSelectedOption(id);
+
   return (
     <PricingWrapper>
       <Container>
@@ -35,19 +40,28 @@ const Pricing = () => {
         </ul>
 
         <Option
+          id="1"
           title="1 month of subscription"
           description="Membership expires after 1 month"
           price={80}
+          selected={selectedOption === '1'}
+          onClick={handleOptionClick}
         />
         <Option
+          id="2"
           title="3 month of subscription"
           description="Membership expires after 3 months"
           price={100}
+          selected={selectedOption === '2'}
+          onClick={handleOptionClick}
         />
         <Option
+          id="3"
           title="6 month of subscription"
           description="Membership expires after 6 months"
           price={150}
+          selected={selectedOption === '3'}
+          onClick={handleOptionClick}
         />
 
         <button>Subscribe now</button>
