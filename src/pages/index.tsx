@@ -7,6 +7,7 @@ import { siteTheme } from '../theme';
 import BannerSection from '@components/BannerSection/BannerSection';
 import InfoSection from '@components/InfoSection.tsx';
 import AboutSection from '@components/AboutSection.tsx';
+import ContactCTA from '@components/ContactCTA';
 
 const IndexPage = () => {
   return (
@@ -16,6 +17,7 @@ const IndexPage = () => {
         <BannerSection />
         <InfoSection />
         <AboutSection />
+        <ContactCTA />
       </Layout>
     </ThemeProvider>
   );

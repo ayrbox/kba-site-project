@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import styled from '@emotion/styled';
 import Container from '@components/Container';
-import AboutImage from '../images/book-heart.jpg';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
