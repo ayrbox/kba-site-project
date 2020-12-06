@@ -10,6 +10,7 @@ import AboutSection from '@components/AboutSection.tsx';
 import ContactCTA from '@components/ContactCTA';
 import AboutTeam from '@components/AboutTeam';
 import Footer from '@components/Footer';
+import Pricing from '@components/Pricing';
 
 const IndexPage = () => {
   return (
@@ -21,6 +22,7 @@ const IndexPage = () => {
         <AboutSection />
         <ContactCTA />
         <AboutTeam />
+        <Pricing />
         <Footer />
       </Layout>
     </ThemeProvider>
