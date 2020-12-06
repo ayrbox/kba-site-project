@@ -8,6 +8,8 @@ import BannerSection from '@components/BannerSection/BannerSection';
 import InfoSection from '@components/InfoSection.tsx';
 import AboutSection from '@components/AboutSection.tsx';
 import ContactCTA from '@components/ContactCTA';
+import AboutTeam from '@components/AboutTeam';
+import Footer from '@components/Footer';
 
 const IndexPage = () => {
   return (
@@ -18,6 +20,8 @@ const IndexPage = () => {
         <InfoSection />
         <AboutSection />
         <ContactCTA />
+        <AboutTeam />
+        <Footer />
       </Layout>
     </ThemeProvider>
   );
