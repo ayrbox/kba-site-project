@@ -11,6 +11,7 @@ import ContactCTA from '@components/ContactCTA';
 import AboutTeam from '@components/AboutTeam';
 import Footer from '@components/Footer';
 import Pricing from '@components/Pricing';
+import Contact from '@components/Contact';
 
 const IndexPage = () => {
   return (
@@ -23,6 +24,7 @@ const IndexPage = () => {
         <ContactCTA />
         <AboutTeam />
         <Pricing />
+        <Contact />
         <Footer />
       </Layout>
     </ThemeProvider>

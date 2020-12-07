@@ -13,6 +13,29 @@ export const PricingWrapper = styled.section`
   padding: 70px 0;
 `;
 
+export const Features = styled.ul`
+  margin-bottom: 20px;
+  & li {
+    padding: 8px 16px;
+  }
+`;
+
+export const SubscribeButton = styled.div`
+  display: flex;
+  justify-content: flex-end;
+
+  & > button {
+    font-size: 1.5em;
+    padding: 0.5em 1.5em;
+    background-color: #b1eee9;
+    border: 0.2em solid #b1eee9;
+    &:hover {
+      color: #535353;
+      background-color: transparent;
+    }
+  }
+`;
+
 const Pricing = () => {
   const [selectedOption, setSelectedOption] = useState('1');
 
@@ -24,7 +47,7 @@ const Pricing = () => {
         <Header>Whats included</Header>
 
         <p>Everything you need to understand about your test.</p>
-        <ul>
+        <Features>
           <li>
             <FaCheckCircle /> Anytime mock test
           </li>
@@ -37,7 +60,7 @@ const Pricing = () => {
           <li>
             <FaCheckCircle /> Result and suggestions
           </li>
-        </ul>
+        </Features>
 
         <Option
           id="1"
@@ -64,7 +87,9 @@ const Pricing = () => {
           onClick={handleOptionClick}
         />
 
-        <button>Subscribe now</button>
+        <SubscribeButton>
+          <button type="button">Subscribe now</button>
+        </SubscribeButton>
       </Container>
     </PricingWrapper>
   );
