@@ -30,7 +30,7 @@ const TiltBottom: FC<TiltBottomProps> = ({ className, color }) => {
   return (
     <ShapeWrapper className={className}>
       <svg data-name="Layer 1" viewBox="0 0 1920 233" fill={color || '#fff'}>
-        <path fill-rule="evenodd" d="M1920 233V0L0 233h1920z" />
+        <path fillRule="evenodd" d="M1920 233V0L0 233h1920z" />
       </svg>
     </ShapeWrapper>
   );
